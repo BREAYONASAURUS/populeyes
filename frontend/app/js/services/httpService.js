@@ -5,6 +5,7 @@ angular.module('frontendApp.controllers').service('HttpService', function($state
     *   Get request to host and path that is specified
     */
     this.getRequest = function(host, path, callback) {
+        console.log(EnvConfig[host] + path);
         $http.get(EnvConfig[host] + path).success(function (data, status, headers, config) {
             if(!data.error) {
               callback(false, data);
@@ -12,7 +13,6 @@ angular.module('frontendApp.controllers').service('HttpService', function($state
               callback(true, data);
             }
         }).error(function (data, status, headers, config) { 
-
             callback(true, 'Was not able to talk to ' + host);
         });
     }

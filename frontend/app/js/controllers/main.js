@@ -1,5 +1,15 @@
 'use strict';
-angular.module('frontendApp.controllers').controller('MainCtrl', function($rootScope, $scope, $state, $timeout, $http, HttpService) {
-	$scope.checklist = ["one", "two", "three"];
+angular.module('frontendApp.controllers').controller('MainCtrl', function($rootScope, $scope, $state, $timeout, HttpService) {
+	
+	$scope.hitInstragram = function() {
+		console.log("shjflsdkjf");
+    	HttpService.getRequest('api', '/insta/auth',function(err, data){
+            if(!err) {
+               console.log(data);
 
+            }  else {
+                console.log(data);
+            }
+        });
+    };
 });
