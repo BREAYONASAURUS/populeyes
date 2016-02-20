@@ -6,7 +6,6 @@ angular.module('frontendApp.envConfig', [])
 .constant('EnvConfig', {
 	//Here goes the host IP/URL address needed
   	'api': 'http://127.0.0.1:3001'
-
 });
 
 

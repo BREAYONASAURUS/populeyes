@@ -1,9 +1,11 @@
 module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
-	
+	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85";
+
+	/*
+	*	Used to auth an instagram Oauth code
+	*/
 	app.get('/insta/auth', function (req, res) {
-	
-		//1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85
 
 		var postData = {
 			"client_id": "bbb32f809544487d827693b43169291b", 
@@ -13,7 +15,6 @@ module.exports = function(app, request, MainHelper){
 			"code": "620bf6d3b15b4c6bba79fedbb03f3e3d"
 		}
 
-		var url = 'https://www.example.com'
 		var config = {
 		  method: 'POST',
 		  body: postData,
