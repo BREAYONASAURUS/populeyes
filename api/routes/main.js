@@ -1,11 +1,20 @@
 module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
 	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85";
+	var google_api_key = "AIzaSyAn0xf1my9qbGerLxNSSWvk_xE67gbXA38";
+
+
+	app.get('/place/photos', function (req, res) {
+
+		//https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=<api-key>&location=<lat,long>&name=<name-of-city>&radius=<radius-in-meters>
+	
+	});
+
 
 	app.get('/photos/coordinates', function (req, res) {
 		// Ways to get GET data from the URL (i.e. http://example.com?lat=123&long=123)
-		var latitude = req.param('lat');
-		var longitude = req.param('long');
+		var latitude = req.params('lat');
+		var longitude = req.params('long');
 
 		// Make request to instragram API here to get information
 

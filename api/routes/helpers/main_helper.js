@@ -9,4 +9,8 @@ module.exports = function MainHelper()
 		//callback(err, return_val)
 		callback(false, testing);
 	};
+
+	this.getGooglePhoto = function(photo_ref, minwidth, request, callback) {
+		// https://maps.googleapis.com/maps/api/place/photo?key=<api-key>&photo_reference=<photo-ref>&maxwidth=<max-width>
+	}
 };
