@@ -2,6 +2,11 @@ module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
 	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85";
 
+	app.get('/photos/coordinates', function (req, res) {
+		var latitude = req.param('lat');
+		var longitude = req.param('long');
+	});
+
 	/*
 	*	Used to auth an instagram Oauth code
 	*/
@@ -41,4 +46,6 @@ module.exports = function(app, request, MainHelper){
 
 	  	res.json('{"result" : ""}')
 	})
+
+
 };
