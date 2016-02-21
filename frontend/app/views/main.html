@@ -1,28 +1,24 @@
 <div ng-controller="MainCtrl" id="main-top">
 	
-    <div class = "body">  
+  <div class = "body">  
 	 <div class="jumbotron">
-	
-	 <div class="header">
-     <h> POPULEYES </h>
+	   <div class="header">
+        <h> POPULEYES </h>
     </div>
    
-   <div class= "subheader">
-   	<p>"Travel the world through other people's eyes!"</p>
-   </div>
-    
-   </div>
-	
+    <div class= "subheader">
+     <p>"Travel the world through other people's eyes!"</p>
+    </div>
+  </div>  
 
-   <div class="leftSection">
+  <div class="leftSection">
 	  <div> <center>
     	<select ng-model="locations.choice" ng-options="o as o for o in locations.options" n>
     	</select>
 		   <button class="button" ng-click="search()">Search
 		   </button> </center>
-
-  	    </div>
- </div>
+    </div>
+  </div>
 
 <div><IMG class="image">
   <img src="/images/us-map.gif" alt="United States">
@@ -38,10 +34,10 @@
 </div>
 
   <div class="cityDisplay">
-  <h1>
-    {{locations.choice}}
-  </h1>
-</div>
+    <h1>
+      {{locations.choice}}
+    </h1>
+  </div>
 </div>
 </div>
 </div>
