@@ -19,7 +19,21 @@
 	</div>
 
 	<img src="/images/us-map.gif" alt="United States" style="">
+<<<<<<< HEAD
 	
+=======
+	<div> 
+    <select ng-model="locations.choice" ng-options="o as o for o in locations.options" n></select>
+    <button style="width:100px; height:30px; background-color:orange;" ng-click="search()">Search</button>
+  </div>
+
+  <div ng-repeat="(key,value) in photos">
+    <div style="width:20%; height:300px; float:right;">
+      <img style="width:20%px; height:50%;" src="{{key}}" alt="Description"/>
+      <p>{{value.name}}</p>
+    </div>
+  </div>
+>>>>>>> e7f4fd6695a2af46d31110fedac75829b5e1a32f
 </div>
 
 
