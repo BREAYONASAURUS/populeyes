@@ -6,7 +6,13 @@ angular.module('frontendApp.controllers').controller('MainCtrl', function($rootS
             "0": "San Fransisco",
             "1": "Chicago",
             "2": "New York City",
-            "3": "Houston"
+            "3": "Houston",
+            "4": "Los Angeles",
+            "5": "Philadelphia",
+            "6": "Phoenix",
+            "7": "Minneapolis",
+            "8": "Ames",
+            "9": "Denver"
         }
     }
 
@@ -26,6 +32,30 @@ angular.module('frontendApp.controllers').controller('MainCtrl', function($rootS
          "Houston" : {
             "lat": "29.7604",
             "long" : "-95.3698"
+        },
+        "Los Angeles" : {
+           "lat": "34.0500",
+            "long": "-118.2500"
+        },
+        "Philadelphia":{
+            "lat": "39.9500",
+            "long": "-75.1667" 
+        },
+         "Phoenix":{
+            "lat": "33.4500",
+            "long": "-112.0667" 
+        },
+         "Minneapolis":{
+            "lat": "44.9778",
+            "long": "-93.2650" 
+        },
+        "Ames": {
+            "lat": "42.0347",
+            "long": "-93.6200"
+        },
+        "Denver": {
+           "lat": "39.7392",
+            "long": "-104.9903" 
         }
     }
 	$scope.validCountry = false;
