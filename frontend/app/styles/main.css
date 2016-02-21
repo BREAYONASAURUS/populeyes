@@ -3,11 +3,10 @@
 }
 
 .header {
-<<<<<<< HEAD
       color: white;
       text-align: center;
       font-size: 60px;
-      background-color:#004d00
+      background-color:#DB0066;
 }
 
 .leftSection {
@@ -18,9 +17,19 @@
  
 }
 .subheader {
-  color: white;
+  color: #DB0066;
   text-align: center;  
   font-size: 30px;
-  background-color:#004d00;
+  background-color:#ffff00;
 }
 
+.cityDisplay{
+ text-align: center; 
+ color: white;
+ background-color:#00b3b3;
+ font-size: 18px;
+}
+
+.body{
+  background-color: #ffff00;
+}

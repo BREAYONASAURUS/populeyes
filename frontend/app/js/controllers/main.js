@@ -1,7 +1,7 @@
 'use strict';
 angular.module('frontendApp.controllers').controller('MainCtrl', function($rootScope, $scope, $state, $timeout, HttpService) {
     $scope.locations = {
-        "choice": "",
+        "choice": "Please Select Location",
         "options": {
             "0": "San Fransisco",
             "1": "Chicago",
