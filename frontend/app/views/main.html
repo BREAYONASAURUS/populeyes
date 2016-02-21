@@ -2,8 +2,19 @@
 	<div>
 	  <h1>Hey hey hey... it's populeyes!</h1>
 	</div>
+	<div> 
+		<select ng-model="locations.choice" ng-options="o as o for o in locations.options" n></select>
+		<button style="width:100px; height:30px; background-color:orange;" ng-click="search()">Search</button>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
 	<img src="/images/us-map.gif" alt="United States" style="">
-	<div style="height:100px; width:100px; cursor: pointer; background:black; color:white;" ng-click="hitInstragram()"><h3>Click to hit Instragram</h3></div>
+	<div ng-repeat="src in photos">
+		<img style="width:200px; height:200px;" src="{{src}}" alt="Description"/>
+	</div>
+	<!--<div style="height:100px; width:100px; cursor: pointer; background:black; color:white;" ng-click="hitInstragram()"><h3>Click to hit Instragram</h3></div>-->
 </div>
 
 

@@ -50,10 +50,26 @@ module.exports = function(app, request, MainHelper){
 		        }
 	        }
          }  
-		 // Return valid JSON string as a response to this API call
-		 
-		 var response_json = '{"result" : "'+JSON.stringify(allPhotos)+'"}';
-		 res.json(response_json);
+         console.log(count);
+         var photos = [];
+         var photoCount = 0;
+         for (var key in allPhotos) {
+		  	if (allPhotos.hasOwnProperty(key)) {
+		   		Helper.getGooglePhoto(allPhotos[key].photo_ref, allPhotos[key].width, request, function(err, body){
+					//defining callback function
+					if(err){
+						console.log("Error: " + body);
+						return;
+					}
+					var ex = JSON.parse(body)
+					photos[photoCount++] = ex.result;
+					if(photoCount == count) {
+						console.log(JSON.stringify(photos));
+						res.json('{"result" : '+ JSON.stringify(photos) + '}');
+					}
+				});
+		  	}
+		}
 	    });
 	});
 

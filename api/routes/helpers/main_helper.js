@@ -24,7 +24,7 @@ module.exports = function MainHelper()
 			callback(true, '{"result" : "failure"}');
 			}
 
-			console.log(response.request.uri.href); //returns photo's url from api information
+			//console.log(response.request.uri.href); //returns photo's url from api information
 			//console.log(getPhoto.url); //photo's url 
 			callback(false, '{"result" : "'+ response.request.uri.href +'"}');
 		})
