@@ -1,28 +1,16 @@
 <div ng-controller="MainCtrl" id="main-top">
 	<div>
 	<div class="jumbotron"style="margin:10px">
-<style>
-
-    h2{
-       color: white;
-       text-align: center;	
-       font-size: 30px;
-    }
-  
-   </style>	
+	
+	<div class="header">
+     <h> POPULEYES </h>
+    </div>
    
-  <div class="header">
-  <h> POPULEYES </h>
+   <div class= "subheader">
+   	<p>"Travel the world through other people's eyes!"</p>
+   </div>
+    
   </div>
-
-
-
-  <h2 style="background-color:#004d00">
-   	 <p>"Travel the world through other people's eyes!"</p>
-  </h2>  
-  
-</div>
-
 	
 	<div class="leftSection">
 	<button type="button">Select City</button>
@@ -31,6 +19,17 @@
 	</div>
 
 	<img src="/images/us-map.gif" alt="United States" style="">
+	<div> 
+    <select ng-model="locations.choice" ng-options="o as o for o in locations.options" n></select>
+    <button style="width:100px; height:30px; background-color:orange;" ng-click="search()">Search</button>
+  </div>
+
+  <div ng-repeat="(key,value) in photos">
+    <div style="width:20%; height:300px; float:right;">
+      <img style="width:20%px; height:50%;" src="{{key}}" alt="Description"/>
+      <p>{{value.name}}</p>
+    </div>
+  </div>
 </div>
 
 
