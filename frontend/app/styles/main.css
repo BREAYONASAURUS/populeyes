@@ -11,7 +11,8 @@
 
 .leftSection {
 	background-color:#00b3b3;
-	width:350px;
+
+	width:250px;
     float:left;
     padding:10px;
  
@@ -23,6 +24,13 @@
   background-color:#ffff00;
 }
 
+
+.button {
+	style:width:400px; 
+	height:50px; 
+	background-color:orange;
+	border-radius: 12px;
+
 .cityDisplay{
  text-align: center; 
  color: white;
@@ -33,3 +41,4 @@
 .body{
   background-color: #ffff00;
 }
+
