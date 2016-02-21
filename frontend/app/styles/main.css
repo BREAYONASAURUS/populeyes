@@ -3,17 +3,20 @@
 }
 
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  background-color:green;
+  background-color:#004d00;
+  font-size: 60px;
   color:white;
   text-align:center;
-  padding:5px;
-  margin-bottom: 10px;
-  font-family: cursive;
+ 
 }
-
+.subheader {
+  color: white;
+  text-align: center;  
+  font-size: 30px;
+  background-color:#004d00;
+}
 .section {
-	background-color:red;
+	background-color:#00b3b3;
 	width:350px;
     float:left;
     padding:10px;
