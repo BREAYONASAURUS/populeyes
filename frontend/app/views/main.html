@@ -19,11 +19,15 @@
 		   </button> </center>
     </div>
   </div>
-
+ 
 <div><IMG class="image">
   <img src="/images/us-map.gif" alt="United States">
 </IMG></div>
-
+ <div class="cityDisplay">
+    <h1>
+      {{locations.choice}}
+    </h1>
+  </div>
 <div class="photoList">
   <div ng-repeat="(key,value) in photos">
     <div style="width:40%; height:300px; float:left">
@@ -33,11 +37,7 @@
   </div>
 </div>
 
-  <div class="cityDisplay">
-    <h1>
-      {{locations.choice}}
-    </h1>
-  </div>
+  
 </div>
 </div>
 </div>
