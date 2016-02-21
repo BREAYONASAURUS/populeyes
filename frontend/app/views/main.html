@@ -1,6 +1,7 @@
 <div ng-controller="MainCtrl" id="main-top">
-	<div>
-	<div class="jumbotron"style="margin:10px">
+	
+    <div class = "body">  
+	<div class="jumbotron">
 	
 	<div class="header">
      <h> POPULEYES </h>
@@ -32,6 +33,18 @@
 
 	<img src="/images/us-map.gif" alt="United States" style="">
 
+  <div ng-repeat="(key,value) in photos">
+    <div style="width:20%; height:300px; float:right;">
+      <img style="width:20%px; height:50%;" src="{{key}}" alt="Description"/>
+      <p>{{value.name}}</p>
+    </div>
+  </div>
+  <div class="cityDisplay">
+  <h1>
+    {{locations.choice}}
+  </h1>
+</div>
+</div>
 </div>
 
 
