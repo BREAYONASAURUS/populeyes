@@ -1,7 +1,7 @@
 module.exports = function MainHelper()
 {
 
-	var google_api_key = "AIzaSyDjtdNqSNbXQ9YhZLo9drkwCvslvJtZwv0";
+	var google_api_key = "AIzaSyAiWu9KZThGJxQjXh1zTIbOvXLm4Sb6UwQ";
 	var helper = this;
 
 	// Helper functions follow this pattern
@@ -22,8 +22,9 @@ module.exports = function MainHelper()
 				callback(true, '{"result" : "failure"}');
 			}
 
+			console.log(response.request.uri.href);
 			//console.log('{"result" : { "photo_ref" : "'+photo_ref+'", "url" : "'+ response.request.uri.href +'"}}'); //returns photo's url from api information
-			//console.log(getPhoto.url); //photo's url 
+			console.log(getPhoto.url); //photo's url 
 			callback(false, '{"result" : { "photo_ref" : "'+photo_ref+'", "url" : "'+ response.request.uri.href +'"}}');
 		});
 	}
