@@ -1,0 +1,533 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose readDependencies loading dependencies from C:\Users\Aimee\Desktop\Development\populeyes\api\package.json
+5 warn package.json Toolbox-Dispatcher@0.0.1 No README data
+6 warn package.json Toolbox-Dispatcher@0.0.1 No license field.
+7 verbose install where, deps [ 'C:\\Users\\Aimee\\Desktop\\Development\\populeyes\\api',
+7 verbose install   [ 'express', 'jasmine-node', 'body-parser', 'request' ] ]
+8 verbose install where, peers [ 'C:\\Users\\Aimee\\Desktop\\Development\\populeyes\\api', [] ]
+9 verbose installManyTop reading for lifecycle C:\Users\Aimee\Desktop\Development\populeyes\api\package.json
+10 info preinstall Toolbox-Dispatcher@0.0.1
+11 verbose readDependencies loading dependencies from C:\Users\Aimee\Desktop\Development\populeyes\api\package.json
+12 silly cache add args [ 'request@^2.69.0', null ]
+13 verbose cache add spec request@^2.69.0
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'request@^2.69.0',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'request',
+14 silly cache add   rawSpec: '^2.69.0',
+14 silly cache add   spec: '>=2.69.0 <3.0.0',
+14 silly cache add   type: 'range' }
+15 silly addNamed request@>=2.69.0 <3.0.0
+16 verbose addNamed ">=2.69.0 <3.0.0" is a valid semver range for request
+17 silly addNameRange { name: 'request', range: '>=2.69.0 <3.0.0', hasData: false }
+18 silly mapToRegistry name request
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/request
+22 verbose addNameRange registry:https://registry.npmjs.org/request not in flight; fetching
+23 silly cache add args [ 'express@^4.13.3', null ]
+24 verbose cache add spec express@^4.13.3
+25 silly cache add parsed spec Result {
+25 silly cache add   raw: 'express@^4.13.3',
+25 silly cache add   scope: null,
+25 silly cache add   name: 'express',
+25 silly cache add   rawSpec: '^4.13.3',
+25 silly cache add   spec: '>=4.13.3 <5.0.0',
+25 silly cache add   type: 'range' }
+26 silly addNamed express@>=4.13.3 <5.0.0
+27 verbose addNamed ">=4.13.3 <5.0.0" is a valid semver range for express
+28 silly addNameRange { name: 'express', range: '>=4.13.3 <5.0.0', hasData: false }
+29 silly mapToRegistry name express
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/express
+33 verbose addNameRange registry:https://registry.npmjs.org/express not in flight; fetching
+34 silly cache add args [ 'jasmine-node@^1.3.1', null ]
+35 verbose cache add spec jasmine-node@^1.3.1
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'jasmine-node@^1.3.1',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'jasmine-node',
+36 silly cache add   rawSpec: '^1.3.1',
+36 silly cache add   spec: '>=1.3.1 <2.0.0',
+36 silly cache add   type: 'range' }
+37 silly addNamed jasmine-node@>=1.3.1 <2.0.0
+38 verbose addNamed ">=1.3.1 <2.0.0" is a valid semver range for jasmine-node
+39 silly addNameRange { name: 'jasmine-node', range: '>=1.3.1 <2.0.0', hasData: false }
+40 silly mapToRegistry name jasmine-node
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/jasmine-node
+44 verbose addNameRange registry:https://registry.npmjs.org/jasmine-node not in flight; fetching
+45 silly cache add args [ 'body-parser@^1.15.0', null ]
+46 verbose cache add spec body-parser@^1.15.0
+47 silly cache add parsed spec Result {
+47 silly cache add   raw: 'body-parser@^1.15.0',
+47 silly cache add   scope: null,
+47 silly cache add   name: 'body-parser',
+47 silly cache add   rawSpec: '^1.15.0',
+47 silly cache add   spec: '>=1.15.0 <2.0.0',
+47 silly cache add   type: 'range' }
+48 silly addNamed body-parser@>=1.15.0 <2.0.0
+49 verbose addNamed ">=1.15.0 <2.0.0" is a valid semver range for body-parser
+50 silly addNameRange { name: 'body-parser', range: '>=1.15.0 <2.0.0', hasData: false }
+51 silly mapToRegistry name body-parser
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/body-parser
+55 verbose addNameRange registry:https://registry.npmjs.org/body-parser not in flight; fetching
+56 verbose request uri https://registry.npmjs.org/request
+57 verbose request no auth needed
+58 info attempt registry request try #1 at 2:45:06 AM
+59 verbose request id 338be03a73330c8b
+60 http request GET https://registry.npmjs.org/request
+61 verbose request uri https://registry.npmjs.org/express
+62 verbose request no auth needed
+63 info attempt registry request try #1 at 2:45:06 AM
+64 http request GET https://registry.npmjs.org/express
+65 verbose request uri https://registry.npmjs.org/jasmine-node
+66 verbose request no auth needed
+67 info attempt registry request try #1 at 2:45:06 AM
+68 http request GET https://registry.npmjs.org/jasmine-node
+69 verbose request uri https://registry.npmjs.org/body-parser
+70 verbose request no auth needed
+71 info attempt registry request try #1 at 2:45:06 AM
+72 http request GET https://registry.npmjs.org/body-parser
+73 http 200 https://registry.npmjs.org/jasmine-node
+74 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+74 verbose headers   etag: '"15OTXY55GXXWO8KGX9Q7DIPNT"',
+74 verbose headers   'content-type': 'application/json',
+74 verbose headers   'cache-control': 'max-age=300',
+74 verbose headers   'content-length': '95081',
+74 verbose headers   'accept-ranges': 'bytes',
+74 verbose headers   date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+74 verbose headers   via: '1.1 varnish',
+74 verbose headers   age: '0',
+74 verbose headers   connection: 'keep-alive',
+74 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+74 verbose headers   'x-cache': 'HIT',
+74 verbose headers   'x-cache-hits': '1',
+74 verbose headers   'x-timer': 'S1455957912.298759,VS0,VE74',
+74 verbose headers   vary: 'Accept' }
+75 silly get cb [ 200,
+75 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+75 silly get     etag: '"15OTXY55GXXWO8KGX9Q7DIPNT"',
+75 silly get     'content-type': 'application/json',
+75 silly get     'cache-control': 'max-age=300',
+75 silly get     'content-length': '95081',
+75 silly get     'accept-ranges': 'bytes',
+75 silly get     date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+75 silly get     via: '1.1 varnish',
+75 silly get     age: '0',
+75 silly get     connection: 'keep-alive',
+75 silly get     'x-served-by': 'cache-ord1725-ORD',
+75 silly get     'x-cache': 'HIT',
+75 silly get     'x-cache-hits': '1',
+75 silly get     'x-timer': 'S1455957912.298759,VS0,VE74',
+75 silly get     vary: 'Accept' } ]
+76 verbose get saving jasmine-node to C:\Users\Aimee\AppData\Roaming\npm-cache\registry.npmjs.org\jasmine-node\.cache.json
+77 http 200 https://registry.npmjs.org/request
+78 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+78 verbose headers   etag: '"2MB69R4L5ERD92LQ0V5BO9HW3"',
+78 verbose headers   'content-type': 'application/json',
+78 verbose headers   'cache-control': 'max-age=300',
+78 verbose headers   'content-length': '186343',
+78 verbose headers   'accept-ranges': 'bytes',
+78 verbose headers   date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+78 verbose headers   via: '1.1 varnish',
+78 verbose headers   age: '145',
+78 verbose headers   connection: 'keep-alive',
+78 verbose headers   'x-served-by': 'cache-ord1727-ORD',
+78 verbose headers   'x-cache': 'HIT',
+78 verbose headers   'x-cache-hits': '2',
+78 verbose headers   'x-timer': 'S1455957912.285205,VS0,VE0',
+78 verbose headers   vary: 'Accept' }
+79 silly get cb [ 200,
+79 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+79 silly get     etag: '"2MB69R4L5ERD92LQ0V5BO9HW3"',
+79 silly get     'content-type': 'application/json',
+79 silly get     'cache-control': 'max-age=300',
+79 silly get     'content-length': '186343',
+79 silly get     'accept-ranges': 'bytes',
+79 silly get     date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+79 silly get     via: '1.1 varnish',
+79 silly get     age: '145',
+79 silly get     connection: 'keep-alive',
+79 silly get     'x-served-by': 'cache-ord1727-ORD',
+79 silly get     'x-cache': 'HIT',
+79 silly get     'x-cache-hits': '2',
+79 silly get     'x-timer': 'S1455957912.285205,VS0,VE0',
+79 silly get     vary: 'Accept' } ]
+80 verbose get saving request to C:\Users\Aimee\AppData\Roaming\npm-cache\registry.npmjs.org\request\.cache.json
+81 http 200 https://registry.npmjs.org/body-parser
+82 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+82 verbose headers   etag: '"740STETV8CYU91KD8VPEM5T36"',
+82 verbose headers   'content-type': 'application/json',
+82 verbose headers   'cache-control': 'max-age=300',
+82 verbose headers   'content-length': '115385',
+82 verbose headers   'accept-ranges': 'bytes',
+82 verbose headers   date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+82 verbose headers   via: '1.1 varnish',
+82 verbose headers   age: '233',
+82 verbose headers   connection: 'keep-alive',
+82 verbose headers   'x-served-by': 'cache-ord1724-ORD',
+82 verbose headers   'x-cache': 'HIT',
+82 verbose headers   'x-cache-hits': '1',
+82 verbose headers   'x-timer': 'S1455957912.292542,VS0,VE0',
+82 verbose headers   vary: 'Accept' }
+83 silly get cb [ 200,
+83 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+83 silly get     etag: '"740STETV8CYU91KD8VPEM5T36"',
+83 silly get     'content-type': 'application/json',
+83 silly get     'cache-control': 'max-age=300',
+83 silly get     'content-length': '115385',
+83 silly get     'accept-ranges': 'bytes',
+83 silly get     date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+83 silly get     via: '1.1 varnish',
+83 silly get     age: '233',
+83 silly get     connection: 'keep-alive',
+83 silly get     'x-served-by': 'cache-ord1724-ORD',
+83 silly get     'x-cache': 'HIT',
+83 silly get     'x-cache-hits': '1',
+83 silly get     'x-timer': 'S1455957912.292542,VS0,VE0',
+83 silly get     vary: 'Accept' } ]
+84 verbose get saving body-parser to C:\Users\Aimee\AppData\Roaming\npm-cache\registry.npmjs.org\body-parser\.cache.json
+85 silly addNameRange number 2 { name: 'body-parser', range: '>=1.15.0 <2.0.0', hasData: true }
+86 silly addNameRange versions [ 'body-parser',
+86 silly addNameRange   [ '1.0.0',
+86 silly addNameRange     '1.0.1',
+86 silly addNameRange     '1.0.2',
+86 silly addNameRange     '1.1.0',
+86 silly addNameRange     '1.1.1',
+86 silly addNameRange     '1.1.2',
+86 silly addNameRange     '1.2.0',
+86 silly addNameRange     '1.2.1',
+86 silly addNameRange     '1.2.2',
+86 silly addNameRange     '1.3.0',
+86 silly addNameRange     '1.3.1',
+86 silly addNameRange     '1.4.0',
+86 silly addNameRange     '1.4.1',
+86 silly addNameRange     '1.4.2',
+86 silly addNameRange     '1.4.3',
+86 silly addNameRange     '1.5.0',
+86 silly addNameRange     '1.5.1',
+86 silly addNameRange     '1.5.2',
+86 silly addNameRange     '1.6.0',
+86 silly addNameRange     '1.6.1',
+86 silly addNameRange     '1.6.2',
+86 silly addNameRange     '1.6.3',
+86 silly addNameRange     '1.6.4',
+86 silly addNameRange     '1.6.5',
+86 silly addNameRange     '1.6.6',
+86 silly addNameRange     '1.6.7',
+86 silly addNameRange     '1.7.0',
+86 silly addNameRange     '1.8.0',
+86 silly addNameRange     '1.8.1',
+86 silly addNameRange     '1.8.2',
+86 silly addNameRange     '1.8.3',
+86 silly addNameRange     '1.8.4',
+86 silly addNameRange     '1.9.0',
+86 silly addNameRange     '1.9.1',
+86 silly addNameRange     '1.9.2',
+86 silly addNameRange     '1.9.3',
+86 silly addNameRange     '1.10.0',
+86 silly addNameRange     '1.10.1',
+86 silly addNameRange     '1.10.2',
+86 silly addNameRange     '1.11.0',
+86 silly addNameRange     '1.12.0',
+86 silly addNameRange     '1.12.1',
+86 silly addNameRange     '1.12.2',
+86 silly addNameRange     '1.12.3',
+86 silly addNameRange     '1.12.4',
+86 silly addNameRange     '1.13.0',
+86 silly addNameRange     '1.13.1',
+86 silly addNameRange     '1.13.2',
+86 silly addNameRange     '1.13.3',
+86 silly addNameRange     '1.14.0',
+86 silly addNameRange     '1.14.1',
+86 silly addNameRange     '1.14.2',
+86 silly addNameRange     '1.15.0' ] ]
+87 silly addNamed body-parser@1.15.0
+88 verbose addNamed "1.15.0" is a plain semver version for body-parser
+89 silly addNameRange number 2 { name: 'jasmine-node', range: '>=1.3.1 <2.0.0', hasData: true }
+90 silly addNameRange versions [ 'jasmine-node',
+90 silly addNameRange   [ '1.0.1',
+90 silly addNameRange     '1.0.2',
+90 silly addNameRange     '1.0.3',
+90 silly addNameRange     '1.0.4',
+90 silly addNameRange     '1.0.5',
+90 silly addNameRange     '1.0.6',
+90 silly addNameRange     '1.0.7',
+90 silly addNameRange     '1.0.8',
+90 silly addNameRange     '1.0.9',
+90 silly addNameRange     '1.0.10',
+90 silly addNameRange     '1.0.11',
+90 silly addNameRange     '1.0.12',
+90 silly addNameRange     '1.0.13',
+90 silly addNameRange     '1.0.15',
+90 silly addNameRange     '1.0.16',
+90 silly addNameRange     '1.0.17',
+90 silly addNameRange     '1.0.18',
+90 silly addNameRange     '1.0.19',
+90 silly addNameRange     '1.0.20',
+90 silly addNameRange     '1.0.21',
+90 silly addNameRange     '1.0.22',
+90 silly addNameRange     '1.0.23',
+90 silly addNameRange     '1.0.24',
+90 silly addNameRange     '1.0.25',
+90 silly addNameRange     '1.0.26',
+90 silly addNameRange     '1.0.27',
+90 silly addNameRange     '1.0.28',
+90 silly addNameRange     '1.1.0',
+90 silly addNameRange     '1.2.0',
+90 silly addNameRange     '1.2.1',
+90 silly addNameRange     '1.2.2',
+90 silly addNameRange     '1.2.3',
+90 silly addNameRange     '1.3.0',
+90 silly addNameRange     '1.3.1',
+90 silly addNameRange     '1.4.0',
+90 silly addNameRange     '1.5.0',
+90 silly addNameRange     '1.6.0',
+90 silly addNameRange     '1.7.0',
+90 silly addNameRange     '1.7.1',
+90 silly addNameRange     '1.8.0',
+90 silly addNameRange     '1.8.1',
+90 silly addNameRange     '1.9.0',
+90 silly addNameRange     '1.9.1',
+90 silly addNameRange     '1.10.0',
+90 silly addNameRange     '1.10.1',
+90 silly addNameRange     '1.10.2',
+90 silly addNameRange     '1.11.0',
+90 silly addNameRange     '1.12.0',
+90 silly addNameRange     '1.12.1',
+90 silly addNameRange     '1.13.0',
+90 silly addNameRange     '1.13.1',
+90 silly addNameRange     '1.14.0',
+90 silly addNameRange     '1.14.1',
+90 silly addNameRange     '2.0.0',
+90 silly addNameRange     '1.14.2',
+90 silly addNameRange     '2.0.0-beta1',
+90 silly addNameRange     '2.0.0-beta2',
+90 silly addNameRange     '2.0.0-beta3',
+90 silly addNameRange     '1.14.3',
+90 silly addNameRange     '2.0.0-beta4',
+90 silly addNameRange     '1.14.4',
+90 silly addNameRange     '1.14.5',
+90 silly addNameRange     '1.0.0-rc1',
+90 silly addNameRange     '1.0.0-rc2',
+90 silly addNameRange     '1.0.0-rc3' ] ]
+91 silly addNamed jasmine-node@1.14.5
+92 verbose addNamed "1.14.5" is a plain semver version for jasmine-node
+93 silly addNameRange number 2 { name: 'request', range: '>=2.69.0 <3.0.0', hasData: true }
+94 silly addNameRange versions [ 'request',
+94 silly addNameRange   [ '0.10.0',
+94 silly addNameRange     '0.8.3',
+94 silly addNameRange     '0.9.0',
+94 silly addNameRange     '0.9.1',
+94 silly addNameRange     '0.9.5',
+94 silly addNameRange     '1.0.0',
+94 silly addNameRange     '1.1.0',
+94 silly addNameRange     '1.1.1',
+94 silly addNameRange     '1.2.0',
+94 silly addNameRange     '1.9.0',
+94 silly addNameRange     '1.9.1',
+94 silly addNameRange     '1.9.2',
+94 silly addNameRange     '1.9.3',
+94 silly addNameRange     '1.9.5',
+94 silly addNameRange     '1.9.7',
+94 silly addNameRange     '1.9.8',
+94 silly addNameRange     '1.9.9',
+94 silly addNameRange     '2.0.0',
+94 silly addNameRange     '2.0.1',
+94 silly addNameRange     '2.0.2',
+94 silly addNameRange     '2.0.3',
+94 silly addNameRange     '2.0.4',
+94 silly addNameRange     '2.0.5',
+94 silly addNameRange     '2.1.0',
+94 silly addNameRange     '2.1.1',
+94 silly addNameRange     '2.2.0',
+94 silly addNameRange     '2.2.5',
+94 silly addNameRange     '2.2.6',
+94 silly addNameRange     '2.2.9',
+94 silly addNameRange     '2.9.0',
+94 silly addNameRange     '2.9.1',
+94 silly addNameRange     '2.9.2',
+94 silly addNameRange     '2.9.3',
+94 silly addNameRange     '2.9.100',
+94 silly addNameRange     '2.9.150',
+94 silly addNameRange     '2.9.151',
+94 silly addNameRange     '2.9.152',
+94 silly addNameRange     '2.9.153',
+94 silly addNameRange     '2.9.200',
+94 silly addNameRange     '2.9.201',
+94 silly addNameRange     '2.9.202',
+94 silly addNameRange     '2.9.203',
+94 silly addNameRange     '2.10.0',
+94 silly addNameRange     '2.11.0',
+94 silly addNameRange     '2.11.1',
+94 silly addNameRange     '2.11.2',
+94 silly addNameRange     '2.11.3',
+94 silly addNameRange     '2.11.4',
+94 silly addNameRange     '2.12.0',
+94 silly addNameRange     '2.14.0',
+94 silly addNameRange     '2.16.0',
+94 silly addNameRange     '2.16.2',
+94 silly addNameRange     '2.16.4',
+94 silly addNameRange     '2.16.6',
+94 silly addNameRange     '2.18.0',
+94 silly addNameRange     '2.19.0',
+94 silly addNameRange     '2.20.0',
+94 silly addNameRange     '2.21.0',
+94 silly addNameRange     '2.22.0',
+94 silly addNameRange     '2.23.0',
+94 silly addNameRange     '2.24.0',
+94 silly addNameRange     '2.25.0',
+94 silly addNameRange     '2.26.0',
+94 silly addNameRange     '2.27.0',
+94 silly addNameRange     '2.28.0',
+94 silly addNameRange     '2.29.0',
+94 silly addNameRange     '2.30.0',
+94 silly addNameRange     '2.31.0',
+94 silly addNameRange     '2.32.0',
+94 silly addNameRange     '2.33.0',
+94 silly addNameRange     '2.34.0',
+94 silly addNameRange     '2.35.0',
+94 silly addNameRange     '2.36.0',
+94 silly addNameRange     '2.37.0',
+94 silly addNameRange     '2.38.0',
+94 silly addNameRange     '2.39.0',
+94 silly addNameRange     '2.40.0',
+94 silly addNameRange     '2.41.0',
+94 silly addNameRange     '2.42.0',
+94 silly addNameRange     '2.43.0',
+94 silly addNameRange     '2.44.0',
+94 silly addNameRange     '2.45.0',
+94 silly addNameRange     '2.46.0',
+94 silly addNameRange     '2.47.0',
+94 silly addNameRange     '2.48.0',
+94 silly addNameRange     '2.49.0',
+94 silly addNameRange     '2.50.0',
+94 silly addNameRange     '2.51.0',
+94 silly addNameRange     '2.52.0',
+94 silly addNameRange     '2.53.0',
+94 silly addNameRange     '2.54.0',
+94 silly addNameRange     '2.55.0',
+94 silly addNameRange     '2.56.0',
+94 silly addNameRange     '2.57.0',
+94 silly addNameRange     '2.58.0',
+94 silly addNameRange     '2.59.0',
+94 silly addNameRange     '2.60.0',
+94 silly addNameRange     '2.61.0',
+94 silly addNameRange     '2.62.0',
+94 silly addNameRange     '2.63.0',
+94 silly addNameRange     '2.64.0',
+94 silly addNameRange     '2.65.0',
+94 silly addNameRange     '2.66.0',
+94 silly addNameRange     '2.67.0',
+94 silly addNameRange     '2.68.0',
+94 silly addNameRange     '2.69.0' ] ]
+95 silly addNamed request@2.69.0
+96 verbose addNamed "2.69.0" is a plain semver version for request
+97 silly mapToRegistry name body-parser
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry uri https://registry.npmjs.org/body-parser
+101 verbose addRemoteTarball https://registry.npmjs.org/body-parser/-/body-parser-1.15.0.tgz not in flight; adding
+102 verbose addRemoteTarball [ 'https://registry.npmjs.org/body-parser/-/body-parser-1.15.0.tgz',
+102 verbose addRemoteTarball   '8168abaeaf9e77e300f7b3aef4df4b46e9b21b35' ]
+103 silly mapToRegistry name jasmine-node
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry https://registry.npmjs.org/
+106 silly mapToRegistry uri https://registry.npmjs.org/jasmine-node
+107 verbose addRemoteTarball https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.14.5.tgz not in flight; adding
+108 verbose addRemoteTarball [ 'https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.14.5.tgz',
+108 verbose addRemoteTarball   '18e8397b856924ee77003666c3731b5aea50c39d' ]
+109 silly mapToRegistry name request
+110 silly mapToRegistry using default registry
+111 silly mapToRegistry registry https://registry.npmjs.org/
+112 silly mapToRegistry uri https://registry.npmjs.org/request
+113 verbose addRemoteTarball https://registry.npmjs.org/request/-/request-2.69.0.tgz not in flight; adding
+114 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.69.0.tgz',
+114 verbose addRemoteTarball   'cf91d2e000752b1217155c005241911991a2346a' ]
+115 info retry fetch attempt 1 at 2:45:08 AM
+116 info attempt registry request try #1 at 2:45:08 AM
+117 http fetch GET https://registry.npmjs.org/body-parser/-/body-parser-1.15.0.tgz
+118 info retry fetch attempt 1 at 2:45:08 AM
+119 info attempt registry request try #1 at 2:45:08 AM
+120 http fetch GET https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.14.5.tgz
+121 info retry fetch attempt 1 at 2:45:08 AM
+122 info attempt registry request try #1 at 2:45:08 AM
+123 http fetch GET https://registry.npmjs.org/request/-/request-2.69.0.tgz
+124 http fetch 200 https://registry.npmjs.org/request/-/request-2.69.0.tgz
+125 http fetch 200 https://registry.npmjs.org/body-parser/-/body-parser-1.15.0.tgz
+126 silly fetchAndShaCheck shasum 8168abaeaf9e77e300f7b3aef4df4b46e9b21b35
+127 verbose addTmpTarball C:\Users\Aimee\AppData\Local\Temp\npm-10428-4dbb4ed1\registry.npmjs.org\body-parser\-\body-parser-1.15.0.tgz not in flight; adding
+128 verbose addTmpTarball already have metadata; skipping unpack for body-parser@1.15.0
+129 silly cache afterAdd body-parser@1.15.0
+130 verbose afterAdd C:\Users\Aimee\AppData\Roaming\npm-cache\body-parser\1.15.0\package\package.json not in flight; writing
+131 verbose afterAdd C:\Users\Aimee\AppData\Roaming\npm-cache\body-parser\1.15.0\package\package.json written
+132 silly fetchAndShaCheck shasum cf91d2e000752b1217155c005241911991a2346a
+133 verbose addTmpTarball C:\Users\Aimee\AppData\Local\Temp\npm-10428-4dbb4ed1\registry.npmjs.org\request\-\request-2.69.0.tgz not in flight; adding
+134 verbose addTmpTarball already have metadata; skipping unpack for request@2.69.0
+135 silly cache afterAdd request@2.69.0
+136 verbose afterAdd C:\Users\Aimee\AppData\Roaming\npm-cache\request\2.69.0\package\package.json not in flight; writing
+137 http fetch 200 https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.14.5.tgz
+138 verbose afterAdd C:\Users\Aimee\AppData\Roaming\npm-cache\request\2.69.0\package\package.json written
+139 http 200 https://registry.npmjs.org/express
+140 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+140 verbose headers   etag: '"4TN2U8YQ7N3I9BOK8WNKSIZCR"',
+140 verbose headers   'content-type': 'application/json',
+140 verbose headers   'cache-control': 'max-age=300',
+140 verbose headers   'content-length': '533686',
+140 verbose headers   'accept-ranges': 'bytes',
+140 verbose headers   date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+140 verbose headers   via: '1.1 varnish',
+140 verbose headers   age: '28',
+140 verbose headers   connection: 'keep-alive',
+140 verbose headers   'x-served-by': 'cache-ord1722-ORD',
+140 verbose headers   'x-cache': 'HIT',
+140 verbose headers   'x-cache-hits': '7',
+140 verbose headers   'x-timer': 'S1455957912.292101,VS0,VE0',
+140 verbose headers   vary: 'Accept' }
+141 silly get cb [ 200,
+141 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+141 silly get     etag: '"4TN2U8YQ7N3I9BOK8WNKSIZCR"',
+141 silly get     'content-type': 'application/json',
+141 silly get     'cache-control': 'max-age=300',
+141 silly get     'content-length': '533686',
+141 silly get     'accept-ranges': 'bytes',
+141 silly get     date: 'Sat, 20 Feb 2016 08:45:12 GMT',
+141 silly get     via: '1.1 varnish',
+141 silly get     age: '28',
+141 silly get     connection: 'keep-alive',
+141 silly get     'x-served-by': 'cache-ord1722-ORD',
+141 silly get     'x-cache': 'HIT',
+141 silly get     'x-cache-hits': '7',
+141 silly get     'x-timer': 'S1455957912.292101,VS0,VE0',
+141 silly get     vary: 'Accept' } ]
+142 verbose get saving express to C:\Users\Aimee\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+143 silly fetchAndShaCheck shasum 18e8397b856924ee77003666c3731b5aea50c39d
+144 verbose stack Error: read ECONNRESET
+144 verbose stack     at exports._errnoException (util.js:870:11)
+144 verbose stack     at TLSWrap.onread (net.js:544:26)
+145 verbose cwd C:\Users\Aimee\Desktop\Development\populeyes\api
+146 error Windows_NT 10.0.10586
+147 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+148 error node v4.3.1
+149 error npm  v2.14.12
+150 error code ECONNRESET
+151 error errno ECONNRESET
+152 error syscall read
+153 error network read ECONNRESET
+153 error network This is most likely not a problem with npm itself
+153 error network and is related to network connectivity.
+153 error network In most cases you are behind a proxy or have bad network settings.
+153 error network
+153 error network If you are behind a proxy, please make sure that the
+153 error network 'proxy' config is set properly.  See: 'npm help config'
+154 verbose exit [ 1, true ]

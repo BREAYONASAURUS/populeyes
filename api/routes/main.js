@@ -1,6 +1,6 @@
 module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
-	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85";
+	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85"; //instagram
 	var google_api_key = "AIzaSyAn0xf1my9qbGerLxNSSWvk_xE67gbXA38";
 
 
@@ -9,7 +9,6 @@ module.exports = function(app, request, MainHelper){
 		//https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=<api-key>&location=<lat,long>&name=<name-of-city>&radius=<radius-in-meters>
 	
 	});
-
 
 	app.get('/photos/coordinates', function (req, res) {
 		// Ways to get GET data from the URL (i.e. http://example.com?lat=123&long=123)
@@ -80,6 +79,49 @@ module.exports = function(app, request, MainHelper){
 
 	  	res.json('{"result" : ""}')
 	})
+
+	app.get('/insta/tag', function(req,res){
+		
+		var tag = req.param('tag'); //tag name request
+		var minTag = req.param('min_tag_id');
+		var maxTag = req.param('max_tag_id');
+
+		//obtain url for get request from instagram
+		var tagRequest = {
+			method: 'GET',
+			url: 'https://api.instagram.com/v1/tags/'+tag+'/media/recent?access_token='+access_token+'&min_tag_id='+minTag+'&max_tag_id'+maxTag
+		}
+
+		//get request for instagram url
+		request(tagRequest, function (err, response, body){
+			if(err){
+				console.log(body);
+				res.jsonon('{"result" : "nope"}');
+				return;
+			}
+
+			var json = JSON.stringify(body);
+			console.log(json);
+			res.json('{"result" : "'+ json + '"}');
+		});
+
+	})
+
+	app.get('/test', function(req, res){
+		Helper.getGooglePhoto("CmRdAAAAqJXesNKSz3J08gaotnqNobQvJKfRYXHdcrzHt4D8ehPKzu--U1iR0E8kNgcib1SOkumb5NQ2bSq7acMVFzsRnu8UXDxgu5AmWsyoYeqpQg4YXEqjRcL9YHQj0k4BR8G_EhC85LGEfey1ADlv222N6AVsGhTjKCBiV3CzGHANJQ8kC1xjwDrciw", 1500, request, function(err, body){
+				//defining callback function
+				if(err){
+				console.log(body);
+				res.jsonon('{"result" : "nope"}');
+				return;
+			}
+			var ex = JSON.parse(body)
+			console.log(ex);
+			res.json('{"result" : "'+ ex.result + '"}');
+		});
+
+
+	})	
 
 
 };
