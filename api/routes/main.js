@@ -1,7 +1,7 @@
 module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
 	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85"; //instagram
-	var google_api_key = "AIzaSyDjtdNqSNbXQ9YhZLo9drkwCvslvJtZwv0";
+	var google_api_key = "AIzaSyAiWu9KZThGJxQjXh1zTIbOvXLm4Sb6UwQ";
 
 
 	app.get('/place/photos', function (req, res) {
@@ -202,7 +202,6 @@ module.exports = function(app, request, MainHelper){
 				return;
 			}
 			var ex = JSON.parse(body)
-			
 			res.json('{"result" : "'+ ex.result + '"}');
 		});
 

@@ -11,7 +11,8 @@
 
 .leftSection {
 	background-color:#00b3b3;
-
+ margin-left: 110px;
+ margin-right: 50px;
 	width:250px;
     float:left;
     padding:10px;
@@ -39,6 +40,21 @@
  color: white;
  background-color:#00b3b3;
  font-size: 18px;
+}
+
+IMG.image {
+  display: block;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+.photoList{
+ width:100%;
+ display: inline-block;
+ overflow: hidden;
+ position: relative;
+ text-align: center;
+ vertical-align: top;
 }
 
 
