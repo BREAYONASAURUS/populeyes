@@ -1,21 +1,23 @@
 module.exports = function(app, request, MainHelper){
 	var Helper = new MainHelper();
 	var access_token = "1476688279.bbb32f8.a9fafb0c16fb415897b92d577946fb85"; //instagram
-	var google_api_key = "AIzaSyAn0xf1my9qbGerLxNSSWvk_xE67gbXA38";
+	var google_api_key = "AIzaSyDjtdNqSNbXQ9YhZLo9drkwCvslvJtZwv0";
 
 
 	app.get('/place/photos', function (req, res) {
-       
+
        var latitude = req.param('lat');
        var longitude = req.param('long');
        var name = req.param('name-of-city');
        var radius = req.param('radius-in-meters');
 
+       var photoObjects = {};
+       var count = 0;
        var locRequest = {
         method: 'GET',
         url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key='+google_api_key+'&location='+latitude+','+longitude+'&name='+name+'&radius='+radius
 	   }
-	    console.log('https://maps.googleapis.com/maps/api/place/nearbysearch/json?key='+google_api_key+'&location='+latitude+','+longitude+'&name='+name+'&radius='+radius);
+	   
 	   request(locRequest, function (err, response, body) {
 
 	    	if (err) {
@@ -24,48 +26,52 @@ module.exports = function(app, request, MainHelper){
 				return;
 			}
 		  var count = 0;
-          var allPhotos = {
-	      // "0" : {
-	      //"photo_ref" : "lksjfoiwefoksdmfl",
-	      //"width" : 1000
-	     //}
-          }
           var data = JSON.parse(body);
           
-          //console.log(data);
-          //console.log(data.results);
-          var result = data.results;
 
+          var result = data.results;
           // Loop through results array
          for(var i = 0; i < result.length; i++) {
 	        // Get the current Object
 	        var obj = result[i];
+	        var name = obj.name;
+	        var types = obj.types;
+	        var location = obj.vicinity;
 	           // Check if photos key is in the object 
 	           if(obj.photos) {
 		         //If it is, get the photo_reference and the width for each one
 		         for(var k = 0; k < obj.photos.length; k++) {
 			      var photo = obj.photos[k];
-			      //Get the photo reference and width and add them to an object outside of this scope
-                  allPhotos[count++] = {photo_ref:photo.photo_reference,width: photo.width}
+			      photoObjects[photo.photo_reference] = {
+			      	"name" : name,
+			      	"location" : location,
+			      	"types" : types,
+			      	"width" :  photo.width
+			      } 
+			      count++;
 		        }
 	        }
          }  
-         console.log(count);
-         var photos = [];
+
          var photoCount = 0;
-         for (var key in allPhotos) {
-		  	if (allPhotos.hasOwnProperty(key)) {
-		   		Helper.getGooglePhoto(allPhotos[key].photo_ref, allPhotos[key].width, request, function(err, body){
+         for (var key in photoObjects) {
+		  	if (photoObjects.hasOwnProperty(key)) {
+		   		Helper.getGooglePhoto(key, photoObjects[key].width, request, function(err, body){
 					//defining callback function
 					if(err){
 						console.log("Error: " + body);
+						res.json('{"result" : "error"}');
 						return;
 					}
-					var ex = JSON.parse(body)
-					photos[photoCount++] = ex.result;
+					
+					var ex = JSON.parse(body);
+					
+					photoObjects[ex.result.url] = photoObjects[ex.result.photo_ref];
+					delete photoObjects[ex.result.photo_ref];
+					photoCount++;
 					if(photoCount == count) {
-						console.log(JSON.stringify(photos));
-						res.json('{"result" : '+ JSON.stringify(photos) + '}');
+						
+						res.json('{"result" : '+ JSON.stringify(photoObjects) + '}');
 					}
 				});
 		  	}
@@ -196,7 +202,7 @@ module.exports = function(app, request, MainHelper){
 				return;
 			}
 			var ex = JSON.parse(body)
-			console.log(ex);
+			
 			res.json('{"result" : "'+ ex.result + '"}');
 		});
 

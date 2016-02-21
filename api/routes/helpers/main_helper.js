@@ -1,7 +1,7 @@
 module.exports = function MainHelper()
 {
 
-	var google_api_key = "AIzaSyAn0xf1my9qbGerLxNSSWvk_xE67gbXA38";
+	var google_api_key = "AIzaSyDjtdNqSNbXQ9YhZLo9drkwCvslvJtZwv0";
 	var helper = this;
 
 	// Helper functions follow this pattern
@@ -17,29 +17,14 @@ module.exports = function MainHelper()
 			method:'GET',
 			url: 'https://maps.googleapis.com/maps/api/place/photo?key='+ google_api_key +'&photo_reference=' + photo_ref + '&maxwidth='+maxwidth
 		}
-
 		request(getPhoto, function(err, response, body){
 			if(err){
-			console.log(body);
-			callback(true, '{"result" : "failure"}');
+				callback(true, '{"result" : "failure"}');
 			}
 
-			//console.log(response.request.uri.href); //returns photo's url from api information
+			//console.log('{"result" : { "photo_ref" : "'+photo_ref+'", "url" : "'+ response.request.uri.href +'"}}'); //returns photo's url from api information
 			//console.log(getPhoto.url); //photo's url 
-			callback(false, '{"result" : "'+ response.request.uri.href +'"}');
-		})
-
-	// this.get('/google/getphoto', function (req, res){
-
-
-
-
-	// 		var json = JSON.stringify(body);
-	// 		console.log(json);
-	// 		res.json('{"result" : "'+ json + '"}');
-
-	// })
-
-
+			callback(false, '{"result" : { "photo_ref" : "'+photo_ref+'", "url" : "'+ response.request.uri.href +'"}}');
+		});
 	}
 };
