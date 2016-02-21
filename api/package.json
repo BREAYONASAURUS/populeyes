@@ -1,8 +1,7 @@
 {
-  	"name": "Toolbox-Dispatcher",
+  	"name": "Populeyes-API",
   	"version": "0.0.1",
-  	"description": "API Dispatcher for admin tool",
-  	"repository": "https://bitbucket.org/bunchball/toolbox/src",
+  	"description": "API to talk to Google Maps",
   	"dependencies": {
 		"express" : "^4.13.3",
 		"jasmine-node" : "^1.3.1",
