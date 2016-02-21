@@ -1,7 +1,27 @@
 <div ng-controller="MainCtrl" id="main-top">
-	<div>
-	  <h1>Hey hey hey... it's populeyes!</h1>
-	</div>
+	<div class="jumbotron"style="margin:10px">
+	<style>
+    h1 {
+       color: white;
+       text-align: center;
+       font-size: 60px;
+    }
+    h2{
+       color: white;
+       text-align: center;	
+       font-size: 30px;
+    }
+  
+   </style>	
+   
+   <h1 style="background-color:#004d00">
+   	 POPULEYES
+  </h1>  
+  <h2 style="background-color:#004d00">
+   	 <p>"Travel the world through other people's eyes!"</p>
+  </h2>  
+  
+</div>
 	<div> 
 		<select ng-model="locations.choice" ng-options="o as o for o in locations.options" n></select>
 		<button style="width:100px; height:30px; background-color:orange;" ng-click="search()">Search</button>
