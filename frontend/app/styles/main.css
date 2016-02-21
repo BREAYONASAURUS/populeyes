@@ -30,15 +30,16 @@
 	height:50px; 
 	background-color:orange;
 	border-radius: 12px;
-
-.cityDisplay{
+}
+.body{
+  background-color: #ffff00;
+}
+.cityDisplay {
  text-align: center; 
  color: white;
  background-color:#00b3b3;
  font-size: 18px;
 }
 
-.body{
-  background-color: #ffff00;
-}
+
 
