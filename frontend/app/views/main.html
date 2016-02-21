@@ -1,9 +1,9 @@
 <div ng-controller="MainCtrl" id="main-top">
 	
     <div class = "body">  
-	<div class="jumbotron">
+	 <div class="jumbotron">
 	
-	<div class="header">
+	 <div class="header">
      <h> POPULEYES </h>
     </div>
    
@@ -11,40 +11,42 @@
    	<p>"Travel the world through other people's eyes!"</p>
    </div>
     
-  </div>
+   </div>
 	
-<div class="leftSection">
-	<div> 
+   <div class="leftSection">
+	  <div> <center>
     	<select ng-model="locations.choice" ng-options="o as o for o in locations.options" n>
     	</select>
-		<button class="button" ng-click="search()">Search
-		</button> 
+		   <button class="button" ng-click="search()">Search
+		   </button> </center>
 
-  	</div>
+  	    </div>
 
-  	<div ng-repeat="(key,value) in photos">
-    	<div style="width:20%; height:300px; float:right;">
+  	   <div ng-repeat="(key,value) in photos">
+    	   <div style="width:20%; height:300px; float:right;">
       		<img style="width:20%px; height:50%;" src="{{key}}" alt="Description"/>
      		 <p>{{value.name}}</p>
    	 	</div>
-	</div>
+	    </div>
 	
-</div>
+      </div>
 
-	<img src="/images/us-map.gif" alt="United States" style="">
+	    <img src="/images/us-map.gif" alt="United States" style="">
 
-  <div ng-repeat="(key,value) in photos">
-    <div style="width:20%; height:300px; float:right;">
+      <div ng-repeat="(key,value) in photos">
+      <div style="width:20%; height:300px; float:right;">
       <img style="width:20%px; height:50%;" src="{{key}}" alt="Description"/>
       <p>{{value.name}}</p>
-    </div>
-  </div>
-  <div class="cityDisplay">
-  <h1>
-    {{locations.choice}}
-  </h1>
-</div>
-</div>
-</div>
+      </div>
+       </div>
+  
+       <div class="cityDisplay">
+       <h1>
+        {{locations.choice}}
+        </h1>
+        </div>
+
+       </div>
+       </div>
 
 
