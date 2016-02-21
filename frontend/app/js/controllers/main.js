@@ -12,7 +12,9 @@ angular.module('frontendApp.controllers').controller('MainCtrl', function($rootS
             "6": "Phoenix",
             "7": "Minneapolis",
             "8": "Ames",
-            "9": "Denver"
+            "9": "Denver",
+            "10": "Iowa State University",
+            "11": "Boston"
         }
     }
 
@@ -56,6 +58,14 @@ angular.module('frontendApp.controllers').controller('MainCtrl', function($rootS
         "Denver": {
            "lat": "39.7392",
             "long": "-104.9903" 
+        },
+        "Iowa State University":{
+           "lat": "42.0239",
+            "long": "-93.6476" 
+        },
+        "Boston":{
+            "lat": "42.3601",
+            "long": "-71.0589" 
         }
     }
 	$scope.validCountry = false;
