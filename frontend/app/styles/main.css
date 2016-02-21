@@ -1,3 +1,20 @@
 .test {
 	color:blue;
 }
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  background-color:green;
+  color:white;
+  text-align:center;
+  padding:5px;
+  margin-bottom: 10px;
+  font-family: cursive;
+}
+
+.section {
+	background-color:red;
+	width:350px;
+    float:left;
+    padding:10px;
+}
