@@ -3,7 +3,6 @@
 }
 
 .header {
-<<<<<<< HEAD
       color: white;
       text-align: center;
       font-size: 60px;
@@ -12,7 +11,8 @@
 
 .leftSection {
 	background-color:#00b3b3;
-	width:350px;
+
+	width:250px;
     float:left;
     padding:10px;
  
@@ -24,3 +24,8 @@
   background-color:#004d00;
 }
 
+.button {
+	style:width:400px; 
+	height:50px; 
+	background-color:orange;
+	border-radius: 12px;
