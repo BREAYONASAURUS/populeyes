@@ -5,23 +5,87 @@ module.exports = function(app, request, MainHelper){
 
 
 	app.get('/place/photos', function (req, res) {
+       
+       var latitude = req.param('lat');
+       var longitude = req.param('long');
+       var name = req.param('name-of-city');
+       var radius = req.param('radius-in-meters');
 
-		//https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=<api-key>&location=<lat,long>&name=<name-of-city>&radius=<radius-in-meters>
-	
+       var locRequest = {
+        method: 'GET',
+        url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key='+google_api_key+'&location='+latitude+','+longitude+'&name='+name+'&radius='+radius
+	   }
+	    console.log('https://maps.googleapis.com/maps/api/place/nearbysearch/json?key='+google_api_key+'&location='+latitude+','+longitude+'&name='+name+'&radius='+radius);
+	   request(locRequest, function (err, response, body) {
+
+	    	if (err) {
+				console.log(body);
+				res.json('{"result" : "nope"}');
+				return;
+			}
+		  var count = 0;
+          var allPhotos = {
+	      // "0" : {
+	      //"photo_ref" : "lksjfoiwefoksdmfl",
+	      //"width" : 1000
+	     //}
+          }
+          var data = JSON.parse(body);
+          
+          //console.log(data);
+          //console.log(data.results);
+          var result = data.results;
+
+          // Loop through results array
+         for(var i = 0; i < result.length; i++) {
+	        // Get the current Object
+	        var obj = result[i];
+	           // Check if photos key is in the object 
+	           if(obj.photos) {
+		         //If it is, get the photo_reference and the width for each one
+		         for(var k = 0; k < obj.photos.length; k++) {
+			      var photo = obj.photos[k];
+			      //Get the photo reference and width and add them to an object outside of this scope
+                  allPhotos[count++] = {photo_ref:photo.photo_reference,width: photo.width}
+		        }
+	        }
+         }  
+		 // Return valid JSON string as a response to this API call
+		 
+		 var response_json = '{"result" : "'+JSON.stringify(allPhotos)+'"}';
+		 res.json(response_json);
+	    });
 	});
 
 
 	app.get('/photos/coordinates', function (req, res) {
 		// Ways to get GET data from the URL (i.e. http://example.com?lat=123&long=123)
-		var latitude = req.params('lat');
-		var longitude = req.params('long');
+        var latitude = req.param('lat');
+		var longitude = req.param('lng');
+
 
 		// Make request to instragram API here to get information
+        
+        var coordRequest = {
+        method: 'GET',
+        url: 'https://api.instagram.com/v1/media/search?lat='+latitude+'&lng='+longitude+'&distance=5000&access_token='+access_token
 
+        }
+        console.log('https://api.instagram.com/v1/media/search?lat='+latitude+'&lng='+longitude+'&distance=5000&access_token='+access_token);
+      request(coordRequest, function (err, response, body) {
 
-		// Return valid JSON string as a response to this API call
-		var response_json = '{"result" : "'+latitude+','+longitude+'"}';
-		res.json(response_json);
+       if (err) {
+				console.log(body);
+				res.json('{"result" : "nope"}');
+				return;
+			}
+
+		 // Return valid JSON string as a response to this API call
+		 var json = JSON.stringify(body);
+		 console.log(json);
+		 var response_json = '{"result" : "'+json+'"}';
+		 res.json(response_json);
+	   });
 	});
 
 	/*
@@ -31,7 +95,7 @@ module.exports = function(app, request, MainHelper){
 
 		/*
 		*	Example of POST request 
-		*/
+		*/x     
 		// POST data is built in JSON format
 		var postData = {
 			"client_id": "bbb32f809544487d827693b43169291b", 
