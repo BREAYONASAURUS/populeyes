@@ -1,4 +1,1 @@
-Hi
-I'm Here!
-I am also here..
-
+The idea for populeyes spun from our team's mutual love of travel. We wanted to learn about APIs, use microservice architecture, and gain more experience using javascript, angular.js, and html/css, so we tailored our project around what we could learn. We had an awesome time learning these languages outside of class, gaining experience with API end points and JSON, as well as using git and utilizing the GForge API. We're excited to build our html/css framework further by utilizing bootstrap.
